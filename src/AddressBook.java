@@ -45,12 +45,14 @@ public class AddressBook {
 		BuddyInfo friend3 = new BuddyInfo ("Bart", "Springfield", "1-800-420-6969");
 		BuddyInfo friend4 = new BuddyInfo ("Lisa", "Springfield", "1-800-420-6969");
 		BuddyInfo friend5 = new BuddyInfo ("Maggie", "Springfield", "1-800-420-6969");
+		BuddyInfo friend6 = new BuddyInfo ("Grandpa", "Springfied", "1-800-420-6969");
 		addressbook.addbuddy(friend1);
 		addressbook.addbuddy(friend2);
 		addressbook.addbuddy(friend3);
 		addressbook.addbuddy(friend4);
 		addressbook.addbuddy(friend5);
-		
+		addressbook.addbuddy(friend6);
+		addressbook.removebuddy(5);
 		System.out.println("Address Book finished adding elements to the list");
 		
 		}
