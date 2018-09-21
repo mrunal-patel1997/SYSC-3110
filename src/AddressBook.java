@@ -17,8 +17,6 @@ public class AddressBook {
 	
 	ArrayList<BuddyInfo> addressbook = new ArrayList<BuddyInfo>();
 	
-
-	
 	void addbuddy (BuddyInfo bud) {
 		addressbook.add(bud);
 	}
