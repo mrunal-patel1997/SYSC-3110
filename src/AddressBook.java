@@ -9,30 +9,35 @@
 
 import java.util.*;
 
+
 public class AddressBook {
 
 	/**
 	 * @param args
 	 */
 	
-	ArrayList<BuddyInfo> addressbook = new ArrayList<BuddyInfo>();
+	private ArrayList<BuddyInfo> addressbook = new ArrayList<BuddyInfo>();
 	
-	void addbuddy (BuddyInfo bud) {
-		addressbook.add(bud);
+	public void addbuddy (BuddyInfo bud) {
+		this.addressbook.add(bud);
 	}
 	
-	void addbuddypos (BuddyInfo bud, int postion)throws IndexOutOfBoundsException {
+	public void addbuddypos (BuddyInfo bud, int postion) throws IndexOutOfBoundsException {
 		if ((postion > 0) &&  (postion <= addressbook.size())) {
-			addressbook.add(postion, bud);
+			this.addressbook.add(postion, bud);
 		}
 		throw new IndexOutOfBoundsException();
 	}
 	
-	void removebuddy (int index) throws IndexOutOfBoundsException{
-		if ((index > 0) && (index <= addressbook.size())) {
-			addressbook.remove(index);
+	public BuddyInfo removebuddy (int index) throws IndexOutOfBoundsException{
+		if ((index >= 0) && (index < this.addressbook.size())) {
+			return this.addressbook.remove(index);
 		}
-		throw new IndexOutOfBoundsException();
+			throw new IndexOutOfBoundsException();
+	}
+	
+	public void  doesNothing () {
+		//does nothing
 	}
 	
 	public static void main(String[] args) {
@@ -50,6 +55,7 @@ public class AddressBook {
 		addressbook.addbuddy(friend4);
 		addressbook.addbuddy(friend5);
 		addressbook.addbuddy(friend6);
+		//addressbook.removebuddy(4);
 		addressbook.removebuddy(5);
 		System.out.println("Address Book finished adding elements to the list");
 		
